@@ -28,3 +28,24 @@ def test_recipe_add_ingredient_1():
     x.add_ingredient(Ingredient("Мука", 500, "г"))
     assert x.ingredients == [Ingredient("Мука", 500, "г")]
 
+def test_recipe_add_ingredient_2():
+    x = Recipe("Хлеб")
+    x.add_ingredient(Ingredient("Мука", 500, "г"))
+    x.add_ingredient(Ingredient("Мука", 500, "г"))
+    assert x.ingredients == [Ingredient("Мука", 1000, "г")]
+
+def test_recipe_scale_1():
+    x = Recipe("Хлеб")
+    x.add_ingredient(Ingredient("Мука", 500, "г"))
+    assert x.scale(2) != x
+
+def test_recipe_scale_2():
+    x = Recipe("Хлеб")
+    x.add_ingredient(Ingredient("Мука", 500, "г"))
+    x.add_ingredient(Ingredient("Вода", 1000, "г"))
+    assert x.scale(2).ingredients == [Ingredient("Мука", 1000, "г"), Ingredient("Вода", 2000, "г")]
+
+def test_scale_3():
+    x = Recipe("Хлеб")
+    with pytest.raises(ValueError):
+        x.scale(-1)
