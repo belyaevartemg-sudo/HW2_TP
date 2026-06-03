@@ -67,7 +67,7 @@ pytest
 ## Быстрая установка
 ```bash
 git clone https://github.com/belyaevartemg-sudo/HW2_TP.git
-cd HW2_TP-main
+cd HW2_TP
 pip install -r requirements.txt
 pytest
 ```
