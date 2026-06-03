@@ -64,5 +64,13 @@ pip install pytest
 pytest
 ```
 
+## Быстрая установка
+```bash
+git clone https://github.com/belyaevartemg-sudo/HW2_TP.git
+cd HW2_TP-main
+pip install -r requirements.txt
+pytest
+```
+
 ## Автор
 Беляев Артём ББИ2503
