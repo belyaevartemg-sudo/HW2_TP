@@ -2,7 +2,7 @@ from Recipe import *
 from Ingredient import *
 
 class DietaryRecipe(Recipe):
-    def __init__(self, title, diet_type, ingredients = None):
+    def __init__(self, title, diet_type, ingredients = []):
         super().__init__(title, ingredients)
         self.diet_type = diet_type
 
