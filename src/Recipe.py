@@ -1,9 +1,12 @@
 from Ingredient import *
 
 class Recipe:
-    def __init__(self, title, ingredients = []):
+    def __init__(self, title, ingredients = None):
         self.title = title
-        self.ingredients = ingredients
+        if ingredients == None:
+            self.ingredients = []
+        else:
+            self.ingredients = ingredients
 
     def add_ingredient(self, ingredient: Ingredient):
         if ingredient not in self.ingredients:
