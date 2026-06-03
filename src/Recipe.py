@@ -1,7 +1,7 @@
 from Ingredient import *
 
 class Recipe:
-    def __init__(self, title, ingredients):
+    def __init__(self, title, ingredients = None):
         self.title = title
         self.ingredients = ingredients
 
