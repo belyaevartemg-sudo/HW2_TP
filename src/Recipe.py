@@ -39,6 +39,6 @@ class Recipe:
     def __str__(self):
         text = self.title + ":"
         for i in self.ingredients:
-            text += "/n"
+            text += "\n"
             text += " -" + str(i)
         return text
