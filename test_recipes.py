@@ -51,6 +51,13 @@ def test_scale_3():
     with pytest.raises(ValueError):
         x.scale(-1)
 
+def test_recipe_len():
+    x = Recipe("Хлеб")
+    x.add_ingredient(Ingredient("Мука", 500, "г"))
+    x.add_ingredient(Ingredient("Вода", 1000, "г"))
+    x.add_ingredient(Ingredient("Мука", 1000, "г"))
+    assert len(x) == 2
+
 def test_shopping_list_add_recipe_1():
     x = Recipe("Хлеб")
     x.add_ingredient(Ingredient("Мука", 500, "г"))
